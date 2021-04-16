@@ -1,5 +1,10 @@
 {
-    "demo": {
-        "title": "Titulo"
+    "PET_TABLE": {
+        "PHOTO": "Fotografía",
+        "NAME": "Nombre",
+        "WEIGHT": "Peso",
+        "HEIGHT": "Altura",
+        "LENGTH": "Longitud",
+        "KIND": "Tipo"
     }
 }

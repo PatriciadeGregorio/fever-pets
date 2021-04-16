@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+-Se ha creado la estructura del proyecto usando tres principales módulos: Core module, shared module y feature module (en nuestro caso pets info module).
+De esta forma, dejamos la estructura básica creada para que cualquier persona en el proyecto pueda:
+
+añadir componentes o servicios comunes en el shared
+pueda seguir desarrollando nueva funcionalidad en el pets info
+pueda añadir archivos comunes a toda la aplicación, como un interceptor, en el core.
+-Se ha añadido fichero de traducción a la aplicación para poder añadir los idiomas necesarios en el futuro.

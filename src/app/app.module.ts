@@ -6,6 +6,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PetsInfoModule } from './pets-info/pets-info.module';
 
 
 
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    PetsInfoModule,
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({

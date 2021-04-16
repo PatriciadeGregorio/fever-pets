@@ -7,5 +7,5 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+  title = 'fever-pets';
 }

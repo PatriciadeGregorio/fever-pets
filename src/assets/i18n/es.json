@@ -5,6 +5,8 @@
         "WEIGHT": "Peso",
         "HEIGHT": "Altura",
         "LENGTH": "Longitud",
-        "KIND": "Tipo"
+        "KIND": "Tipo",
+        "WEIGHT_UNIT": "gr",
+        "HEIGHT_LENGTH_UNIT": "cm"
     }
 }

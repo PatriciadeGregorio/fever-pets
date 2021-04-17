@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { IPet } from '../models/pet.model';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { ParseUtilsService } from './parse-utils.service';
 
 

@@ -1,5 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { IPet } from '../../models/pet.model';
@@ -9,24 +8,30 @@ import { IPet } from '../../models/pet.model';
   templateUrl: './pets-table.component.html',
   styleUrls: ['./pets-table.component.scss']
 })
-export class PetsTableComponent implements OnInit {
-  @Input() pets: Array<IPet>;
+export class PetsTableComponent implements OnInit, OnChanges {
+  @Input() pets: {data: Array<IPet>, links: any};
+  @Output() paginate: EventEmitter<string> = new EventEmitter();
   public displayedColumns: string[] = ['photo_url', 'name', 'weight', 'height', 'length', 'kind'];
-  public pageSizeOptions: Array<number> = [5, 10];
   public tablePets: MatTableDataSource<IPet>;
   @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
 
 
   constructor() { }
 
   ngOnInit(): void {
-    this.tablePets = new MatTableDataSource(this.pets);
+    this.tablePets = new MatTableDataSource(this.pets.data);
+  }
+
+  ngOnChanges(): void {
+    this.tablePets = new MatTableDataSource(this.pets.data);
   }
 
   ngAfterViewInit() {
     this.tablePets.sort = this.sort;
-    this.tablePets.paginator = this.paginator;
+  }
+
+  public onPaginate(link: string) {
+    this.paginate.emit(link);
   }
 
 }

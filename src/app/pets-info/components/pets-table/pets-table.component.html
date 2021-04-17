@@ -35,4 +35,4 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <mat-paginator [pageSizeOptions]="pageSizeOptions" showFirstLastButtons></mat-paginator>
+  <app-table-pagination [links]="pets.links" (paginate)="onPaginate($event)"></app-table-pagination>

@@ -10,6 +10,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { PetsTableComponent } from './components/pets-table/pets-table.component';
 import { TablePaginationComponent } from './components/table-pagination/table-pagination.component';
+import { DetailsComponent } from './components/details/details.component';
 
 
 
@@ -17,7 +18,8 @@ import { TablePaginationComponent } from './components/table-pagination/table-pa
   declarations: [
     HomeComponent,
     PetsTableComponent,
-    TablePaginationComponent
+    TablePaginationComponent,
+    DetailsComponent
   ],
   imports: [
     CommonModule,

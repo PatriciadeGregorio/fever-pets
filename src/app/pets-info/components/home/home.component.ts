@@ -18,9 +18,9 @@ export class HomeComponent implements OnInit {
   }
 
   public onPaginate(link: string) {
-    this.petsService.getPets(link).subscribe((resp: {data: Array<IPet>, links: any}) => {
+    this.petsService.getPets(link).subscribe((resp: {data: Array<IPet>, links: {[key: string]: string}}) => {
       this.pets = resp;
-    })
+    });
   }
 
 }

@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PetsInfoModule } from './pets-info/pets-info.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { APP_BASE_HREF } from '@angular/common';
 
 
 
@@ -31,7 +32,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     }),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    {provide: APP_BASE_HREF, useValue: '/pets-info'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

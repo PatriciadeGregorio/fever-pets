@@ -11,10 +11,10 @@ import { PetsService } from '../services/pets.service';
 @Injectable({
   providedIn: 'root'
 })
-export class PetResolver implements Resolve<IPet> {
+export class PetResolver implements Resolve<{data: Array<IPet>, links: any}> {
   constructor(private readonly petService: PetsService){}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IPet> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<{data: Array<IPet>, links: any}> {
     return this.petService.getPets();
   }
 }

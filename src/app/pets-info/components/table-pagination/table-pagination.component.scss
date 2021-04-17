@@ -1,0 +1,19 @@
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+}
+
+.pagination-item {
+    border: 1px solid blue;
+    border-radius: 4px;
+    padding: 10px;
+    min-width: 20px;
+    cursor: pointer;
+    margin: 1px;
+}
+
+.pagination-item--disabled {
+    cursor: unset;
+    color: lightgrey;
+}

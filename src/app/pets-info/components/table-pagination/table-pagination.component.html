@@ -1,0 +1,11 @@
+<section class="pagination">
+    <div
+     [ngClass]="{'pagination-item--disabled': !links.prev}" 
+     class="pagination-item"
+     (click)="paginateFirst()"
+     > << </div>
+    <div [ngClass]="{'pagination-item--disabled': !links.prev}" class="pagination-item" (click)="paginatePrevious()"> < </div>
+    <div [ngClass]="{'pagination-item--disabled': !links.next}" class="pagination-item" (click)="paginateNext()"> > </div>
+    <div [ngClass]="{'pagination-item--disabled': !links.next}" class="pagination-item" (click)="paginateLast()"> >> </div>
+   </section>
+ 

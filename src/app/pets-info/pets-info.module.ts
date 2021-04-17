@@ -9,13 +9,15 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { PetsTableComponent } from './components/pets-table/pets-table.component';
+import { TablePaginationComponent } from './components/table-pagination/table-pagination.component';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    PetsTableComponent
+    PetsTableComponent,
+    TablePaginationComponent
   ],
   imports: [
     CommonModule,

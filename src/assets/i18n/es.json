@@ -1,31 +1,29 @@
 {
     "PET": {
-        "PHOTO": "Fotografía",
-        "NAME": "Nombre",
-        "WEIGHT": "Peso",
-        "HEIGHT": "Altura",
-        "LENGTH": "Longitud",
-        "KIND": "Tipo",
-        "DESCRIPTION": "Descripción",
-        "DETAILS": "Detalles",
-        "HEALTH": "Salud",
-        "DATE": "Fecha de ingreso",
-        "OTHER_INFORMATION": "Otra información",
+        "PHOTO": "Photo",
+        "NAME": "Name",
+        "WEIGHT": "Weight",
+        "HEIGHT": "Height",
+        "LENGTH": "Length",
+        "KIND": "Kind",
+        "DESCRIPTION": "Description",
+        "DETAILS": "Details",
+        "HEALTH": "Health",
         "WEIGHT_UNIT": "gr",
         "HEIGHT_LENGTH_UNIT": "cm"
     },
     "HEALTH_LEVEL": {
-        "UNHEALTHY": "Insano",
-        "HEALTHY": "Sano",
-        "VERY_HEALTHY": "Muy sano"
+        "UNHEALTHY": "Unhealthy",
+        "HEALTHY": "Healthy",
+        "VERY_HEALTHY": "Very healthy"
     },
     "DETAILS": {
         "VISIT": "Visit it"
     },
     "TITLES": {
-        "PET_FEATURES": "Our pets features are:",
-        "PET_DAY": "Here it is the pet of the day:",
-        "PET_CERTAIN_DAY": "Busca la mascota de otro día: "
+        "PET_FEATURES": "Our pet features are:",
+        "PET_DAY": "Here you can see the pet of the day:",
+        "PET_CERTAIN_DAY": "Discover the pet of each day: "
     },
     "PET_DAY": {
         "CHOOSE_DATE": "Choose a day"

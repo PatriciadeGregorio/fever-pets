@@ -1,1 +1,41 @@
-<p>details works!</p>
+<section class="header">
+    <div class="header__name">
+        {{pet.name}}
+    </div>
+</section>
+
+<section class="details">
+    <article class="main-block">
+        <section [ngStyle]="{'background-image': 'url(' + pet.photo_url + ')'}"  class="main-block__image">
+        </section>
+
+        <section class="description">
+            <h1>{{'PET.DETAILS' | translate}}:</h1>
+            <ul>
+                <li class="description__item-list"><span class="description__item-list--bold"> {{'PET.WEIGHT' |
+                        translate}}:
+                    </span> {{pet.weight}} {{'PET.WEIGHT_UNIT' | translate}}</li>
+                <li class="description__item-list"> <span class="description__item-list--bold"> {{'PET.HEIGHT' |
+                        translate}}:
+                    </span> {{pet.height}} {{'PET.HEIGHT_LENGTH_UNIT' | translate}}</li>
+                <li class="description__item-list"> <span class="description__item-list--bold"> {{'PET.LENGTH' |
+                        translate}}:</span> {{pet.length}} {{'PET.HEIGHT_LENGTH_UNIT' | translate}}</li>
+                <li class="description__item-list"> <span class="description__item-list--bold"> {{'PET.KIND' |
+                        translate}}:
+                    </span> {{pet.kind}}</li>
+                <li class="description__item-list"> <span class="description__item-list--bold"> {{'PET.DATE' |
+                        translate}}:
+                    </span> 17/04/2021</li>
+                <li class="description__item-list"> <span class="description__item-list--bold"> {{'PET.DESCRIPTION' |
+                        translate}}:
+                    </span>{{pet.description}}</li>
+            </ul>
+
+            <div [class]="getHealth().color" class="info__health info-margin">
+                {{getHealth().label | translate}}
+            </div>
+
+        </section>
+    </article>
+
+</section>

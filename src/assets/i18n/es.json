@@ -1,10 +1,25 @@
 {
-    "PET_TABLE": {
+    "PET": {
         "PHOTO": "Fotografía",
         "NAME": "Nombre",
         "WEIGHT": "Peso",
         "HEIGHT": "Altura",
         "LENGTH": "Longitud",
-        "KIND": "Tipo"
+        "KIND": "Tipo",
+        "DESCRIPTION": "Descripción",
+        "DETAILS": "Detalles",
+        "HEALTH": "Salud",
+        "DATE": "Fecha de ingreso",
+        "OTHER_INFORMATION": "Otra información",
+        "WEIGHT_UNIT": "gr",
+        "HEIGHT_LENGTH_UNIT": "cm"
+    },
+    "HEALTH_LEVEL": {
+        "UNHEALTHY": "Insano",
+        "HEALTHY": "Sano",
+        "VERY_HEALTHY": "Muy sano"
+    },
+    "DETAILS": {
+        "VISIT": "Visit it"
     }
 }

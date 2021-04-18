@@ -57,10 +57,4 @@ describe('PetResolver', () => {
     });
   });
 
-  xit('should not resolve on error', () => {
-    spyOn(petService, 'getPets').and.returnValue(throwError({status: 404}));
-    resolver.resolve(route, null).subscribe(pets => expect(pets).toBeFalse());
-  });
-
-
 });

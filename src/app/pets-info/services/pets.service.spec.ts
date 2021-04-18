@@ -79,4 +79,33 @@ describe('PetsService', () => {
       httpMock.verify();
 
     })));
+
+    it(`should fetch pet as an Observable`, waitForAsync(inject([PetsService],
+      (petsService: PetsService) => {
+
+        const pet = {
+          description: "I hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food but meow",
+          height: 26,
+          id: 6,
+          kind: "cat",
+          length: 50,
+          name: "Snap",
+          number_of_lives: 7,
+          photo_url: "https://cdn2.thecatapi.com/images/8k7.jpg",
+          weight: 4623
+        };
+      
+        petsService.getPetsById('1')
+          .subscribe((pet: IPet) => {
+            expect(pet.number_of_lives).toBe(7);
+          });
+        
+  
+        let req = httpMock.expectOne('https://my-json-server.typicode.com/Feverup/fever_pets_data/pets/1');
+        expect(req.request.method).toBe('GET');
+  
+        req.flush(pet);
+        httpMock.verify();
+  
+      })));
 });

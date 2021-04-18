@@ -4,6 +4,7 @@ import { ActivatedRouteSnapshot } from '@angular/router';
 import { of, throwError } from 'rxjs';
 import { IPet } from '../models/pet.model';
 import { PetsService } from '../services/pets.service';
+import { getLinks, getPet1 } from '../test/utils.test';
 
 import { PetResolver } from './pet.resolver';
 
@@ -22,25 +23,8 @@ describe('PetResolver', () => {
     route = new ActivatedRouteSnapshot();
     petService = TestBed.inject(PetsService);
     pet = {
-      data: [
-        {
-          description: "I hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food but meow",
-          height: 26,
-          id: 6,
-          kind: "cat",
-          length: 50,
-          name: "Snap",
-          number_of_lives: 7,
-          photo_url: "https://cdn2.thecatapi.com/images/8k7.jpg",
-          weight: 4623
-        }
-      ],
-      links: {
-        prev: 'https://linkPrev.com',
-        next: 'https://linkNext.com',
-        first: 'https://linkFirst.com',
-        last: 'https://linkLast.com',
-      }
+      data: [getPet1()],
+      links: getLinks()
     }
   });
 

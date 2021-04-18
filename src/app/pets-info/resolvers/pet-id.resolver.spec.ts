@@ -4,6 +4,7 @@ import { ActivatedRoute, ActivatedRouteSnapshot, convertToParamMap } from '@angu
 import { of } from 'rxjs';
 import { IPet } from '../models/pet.model';
 import { PetsService } from '../services/pets.service';
+import { getPet1 } from '../test/utils.test';
 
 import { PetIdResolver } from './pet-id.resolver';
 
@@ -21,17 +22,7 @@ describe('PetIdResolver', () => {
     resolver = TestBed.inject(PetIdResolver);
     route = {params: {id: '1'}} as any;
     petService = TestBed.inject(PetsService);
-    pet = {
-      description: "I hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food but meow",
-      height: 26,
-      id: 6,
-      kind: "cat",
-      length: 50,
-      name: "Snap",
-      number_of_lives: 7,
-      photo_url: "https://cdn2.thecatapi.com/images/8k7.jpg",
-      weight: 4623
-    };
+    pet = getPet1();
   });
 
   it('should be created', () => {

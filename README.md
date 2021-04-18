@@ -40,3 +40,7 @@ That's basically our glorious Fever Pets® v1.0, and I'm sure you are already th
 In order for us to be able to see the progress, and give you feedback, we would ask for it to be done by making several PRs to the project, doing each PR after the previous one has been approved and merged:
 * PR #1: Create the project basic structure, this is just the skeleton of the project for whichever framework you have chosen to use (Angular, Vue, or whichever you fancy using). This PR should not contain any logic related to Fever Pets®
 * After that, create as many pull requests as you want for the desired features. As we cannot review the PRs on time, just merge them to development or master and continue your code test, no need to wait for us. Every decision made during the development, should be written either on the body of the pull request or on the README.md
+
+NOTA: 
+* If every feature is correct after reviewing this version, all changes will be merged into main branch.
+Finally, a tag will be created with the new version (1.0.0)

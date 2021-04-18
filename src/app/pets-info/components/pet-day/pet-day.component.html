@@ -1,0 +1,14 @@
+<h2>{{'TITLES.PET_DAY' | translate}}</h2>
+
+<app-pet-card *ngIf="petDay" [pet]="petDay"></app-pet-card>
+
+<h2>{{'TITLES.PET_CERTAIN_DAY' | translate}}</h2>
+
+<mat-form-field appearance="fill">
+  <mat-label>{{'PET_DAY.CHOOSE_DATE' | translate}}</mat-label>
+  <input matInput [matDatepicker]="picker" (dateChange)="getPetOfCertainDay($event)">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<app-pet-card *ngIf="petCertainDay" [pet]="petCertainDay"></app-pet-card>

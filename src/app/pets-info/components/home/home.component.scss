@@ -1,0 +1,15 @@
+.home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home__pet-table {
+    flex:2;
+    padding:1em;
+}
+
+.home__pet-day {
+    flex:1;
+    padding: 1em;
+    min-width: 300px;
+}

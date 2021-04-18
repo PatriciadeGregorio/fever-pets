@@ -1,3 +1,4 @@
+<h2>{{'TITLES.PET_FEATURES' | translate}}</h2>
 <table mat-table [dataSource]="tablePets" (matSortChange)="sortData($event)" [matSortActive]="sortType.criteria" [matSortDirection]="sortType.direction" matSort class="mat-elevation-z8">
     <ng-container matColumnDef="photo_url">
         <th mat-header-cell *matHeaderCellDef> {{'PET.PHOTO' | translate}} </th>

@@ -22,7 +22,8 @@ export class PetsService {
   public getPets(link?: string): Observable<any> {
     const url: string = link ? link : `${this.getCompleteRoute()}?_page=1`;
     return this.http.get<any>(url , {observe: 'response' as 'body'}).pipe(map(resp => {
-      const links: {[key: string]: string} = this.parseUtils.parseLinkHeader(resp.headers.get('link'));
+      const linkHeader: string = resp.headers.get('link');
+      const links: {[key: string]: string} = linkHeader ? this.parseUtils.parseLinkHeader(linkHeader) : {};
       return {
         data: resp.body,
         links
@@ -34,7 +35,7 @@ export class PetsService {
     return this.http.get<IPet>(`${this.getCompleteRoute()}/${id}`);
   }
 
-  private getCompleteRoute(): string {
+  public getCompleteRoute(): string {
     return `${this.baseUrl}${this.petsDomain}`;
   }
 }

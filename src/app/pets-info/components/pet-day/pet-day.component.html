@@ -1,0 +1,17 @@
+
+<h2>{{'TITLES.PET_DAY' | translate}}</h2>
+<mat-card *ngIf="petDay" class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{petDay.name}}</mat-card-title>
+      <mat-card-subtitle>{{petDay.kind}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{petDay.photo_url}}" alt="pet photo">
+    <mat-card-content>
+      <p>
+       {{petDay.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+<h2>{{'TITLES.PET_CERTAIN_DAY' | translate}}</h2>
+<button (click)="getPetOfCertainDay()">MASCOTA DE UN DETERMINADO DIA</button>

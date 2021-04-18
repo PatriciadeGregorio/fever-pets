@@ -1,1 +1,4 @@
-<app-pets-table [pets]="pets" (paginate)="onPaginate($event)"></app-pets-table>
+<section class="home">
+    <app-pets-table class="home__pet-table" [pets]="pets" (paginate)="onPaginate($event)"></app-pets-table>
+    <app-pet-day class="home__pet-day"></app-pet-day>
+</section>

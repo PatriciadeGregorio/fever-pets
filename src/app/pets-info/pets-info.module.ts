@@ -8,7 +8,6 @@ import { HomeComponent } from './components/home/home.component';
 import { PetsTableComponent } from './components/pets-table/pets-table.component';
 import { TablePaginationComponent } from './components/table-pagination/table-pagination.component';
 import { DetailsComponent } from './components/details/details.component';
-import { PetDayComponent } from './components/pet-day/pet-day.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -17,10 +16,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { PetCardComponent } from './components/pet-card/pet-card.component';
-
-
-
-
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { PetDayComponent } from './components/pet-day/pet-day.component';
 
 
 @NgModule({
@@ -42,6 +39,7 @@ import { PetCardComponent } from './components/pet-card/pet-card.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
+    MatButtonToggleModule,
     PetsInfoRoutingModule,
     TranslateModule.forChild()
   ],

@@ -1,0 +1,83 @@
+.header {
+    background: url('https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15em;
+    width: 100%;
+}
+
+.header__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-size:3em
+}
+
+.details {
+    padding: 1em;
+    display: flex;
+}
+.main-block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.main-block__image {
+    flex:1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-width: 305px;
+}
+
+.info {
+    padding: 1em;
+}
+
+.info-margin {
+    margin: 1em 0;
+}
+
+.info__description {
+    color: #a1a4aa;
+    font-size: 2em;
+}
+
+.info__health{
+    max-width: 5em;
+    border-radius: 15px;
+    text-align: center;
+    padding: 0.25em;
+}
+
+.info__health--very-healthy{
+    background-color: #3ec492;
+}
+
+.info__health--unhealthy{
+    background-color: red;
+}
+
+.info__health--healthy{
+    background-color: yellow;
+}
+
+.description {
+    border: 1px solid #a1a4aa;
+    border-radius: 5px;
+    padding: 1em;
+    flex: 2;
+}
+
+.description__item-list {
+    color: #a1a4aa;
+}
+
+.description__item-list--bold {
+    font-weight: bold;
+}

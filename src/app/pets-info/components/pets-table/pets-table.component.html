@@ -1,32 +1,32 @@
 <table mat-table [dataSource]="tablePets" (matSortChange)="sortData($event)" [matSortActive]="sortType.criteria" [matSortDirection]="sortType.direction" matSort class="mat-elevation-z8">
     <ng-container matColumnDef="photo_url">
-        <th mat-header-cell *matHeaderCellDef> {{'PET_TABLE.PHOTO' | translate}} </th>
+        <th mat-header-cell *matHeaderCellDef> {{'PET.PHOTO' | translate}} </th>
         <td mat-cell *matCellDef="let element"> 
             <img [src]="element.photo_url"> </td>
       </ng-container>
     
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'PET_TABLE.NAME' | translate}} </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'PET.NAME' | translate}} </th>
       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
   
     <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'PET_TABLE.WEIGHT' | translate}} ({{'PET_TABLE.WEIGHT_UNIT' | translate}})</th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} {{'PET_TABLE.WEIGHT_UNIT' | translate}} </td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'PET.WEIGHT' | translate}} ({{'PET.WEIGHT_UNIT' | translate}})</th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} {{'PET.WEIGHT_UNIT' | translate}} </td>
     </ng-container>
   
     <ng-container matColumnDef="height">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'PET_TABLE.HEIGHT' | translate}} ({{'PET_TABLE.HEIGHT_LENGTH_UNIT' | translate}}) </th>
-      <td mat-cell *matCellDef="let element"> {{element.height}} {{'PET_TABLE.HEIGHT_LENGTH_UNIT' | translate}}</td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'PET.HEIGHT' | translate}} ({{'PET.HEIGHT_LENGTH_UNIT' | translate}}) </th>
+      <td mat-cell *matCellDef="let element"> {{element.height}} {{'PET.HEIGHT_LENGTH_UNIT' | translate}}</td>
     </ng-container>
   
     <ng-container matColumnDef="length">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'PET_TABLE.LENGTH' | translate}} ({{'PET_TABLE.HEIGHT_LENGTH_UNIT' | translate}}) </th>
-      <td mat-cell *matCellDef="let element"> {{element.length}} {{'PET_TABLE.HEIGHT_LENGTH_UNIT' | translate}} </td>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'PET.LENGTH' | translate}} ({{'PET.HEIGHT_LENGTH_UNIT' | translate}}) </th>
+      <td mat-cell *matCellDef="let element"> {{element.length}} {{'PET.HEIGHT_LENGTH_UNIT' | translate}} </td>
     </ng-container>
 
     <ng-container matColumnDef="kind">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'PET_TABLE.KIND' | translate}} </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'PET.KIND' | translate}} </th>
         <td mat-cell *matCellDef="let element"> {{element.kind}} </td>
       </ng-container>
   

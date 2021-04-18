@@ -23,8 +23,11 @@
         "VISIT": "Visit it"
     },
     "TITLES": {
-        "PET_FEATURES": "Las características de nuestras mascotas:",
-        "PET_DAY": "¿Quieres conocer la mascota del día?",
+        "PET_FEATURES": "Our pets features are:",
+        "PET_DAY": "Here it is the pet of the day:",
         "PET_CERTAIN_DAY": "Busca la mascota de otro día: "
+    },
+    "PET_DAY": {
+        "CHOOSE_DATE": "Choose a day"
     }
 }

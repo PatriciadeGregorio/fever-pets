@@ -28,19 +28,27 @@ export class PetDayComponent implements OnInit {
     });
   }
 
-  private getMonthDay(): number {
-    return moment().date();
+  private getMonthDay(date?: Date): number {
+    let momentDate = moment();
+    if (date) {
+      momentDate = moment(date);
+    }
+    return momentDate.date();
   }
 
   public getPetOfDay(): void {
-    if (this.pets.length < this.MAX_MONTH_DAYS) {
+    if (this.pets.length <= this.MAX_MONTH_DAYS) {
       const id: number = this.getMonthDay() % this.pets.length;
       this.petDay = this.pets.find((pet: IPet) => pet.id === id);
     }
   }
 
-  public getPetOfCertainDay(): void {
-    const id: number = 14;
+  public getPetOfCertainDay({value}): void {
+    const day: number = this.getMonthDay(value);
+    if (this.pets.length <= this.MAX_MONTH_DAYS) {
+      const id: number = (day % this.pets.length) + 1;
+      this.petCertainDay = this.pets.find((pet: IPet) => pet.id === id);
+    }
   }
 
 }

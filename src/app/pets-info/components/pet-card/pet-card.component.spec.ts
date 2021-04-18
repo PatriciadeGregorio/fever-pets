@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { getPet1 } from '../../test/utils.test';
 
 import { PetCardComponent } from './pet-card.component';
 
@@ -18,17 +19,7 @@ describe('PetCardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PetCardComponent);
     component = fixture.componentInstance;
-    component.pet =  {
-      description: "I hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food but meow",
-      height: 26,
-      id: 6,
-      kind: "cat",
-      length: 50,
-      name: "Snap",
-      number_of_lives: 7,
-      photo_url: "https://cdn2.thecatapi.com/images/8k7.jpg",
-      weight: 4623
-    };
+    component.pet =  getPet1();
     fixture.detectChanges();
   });
 

@@ -10,6 +10,7 @@ import { ActivatedRoute, convertToParamMap, Router } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IPet } from '../../models/pet.model';
+import { getLinks, getPet1, getPet2 } from '../../test/utils.test';
 import { PetsTableComponent } from './pets-table.component';
 
 function I18nHttpLoaderFactory(http: HttpClient) {
@@ -63,36 +64,8 @@ describe('PetsTableComponent', () => {
     fixture = TestBed.createComponent(PetsTableComponent);
     component = fixture.componentInstance;
     component.pets = {
-      data: [
-        {
-          description: "I hide behind curtain when vacuum cleaner is on scratch strangers and poo on owners food but meow",
-          height: 26,
-          id: 6,
-          kind: "cat",
-          length: 50,
-          name: "Snap",
-          number_of_lives: 7,
-          photo_url: "https://cdn2.thecatapi.com/images/8k7.jpg",
-          weight: 4623
-        },
-        {
-          description: "Lorem",
-          height: 12,
-          id: 12,
-          kind: "dog",
-          length: 90,
-          name: "Red",
-          number_of_lives: 5,
-          photo_url: "https://cdn2.thecatapi.com/images/8k7.jpg",
-          weight: 432
-        }
-      ],
-      links: {
-        prev: 'https://linkPrev.com',
-        next: 'https://linkNext.com',
-        first: 'https://linkFirst.com',
-        last: 'https://linkLast.com',
-      }
+      data: [getPet1(), getPet2()],
+      links: getLinks()
     };
     fixture.detectChanges();
   });
@@ -119,21 +92,11 @@ describe('PetsTableComponent', () => {
   });
 
   it('should navigateToDetails when click on row', () => {
-    const pet: IPet =  {
-      description: "Lorem",
-      height: 12,
-      id: 12,
-      kind: "dog",
-      length: 90,
-      name: "Red",
-      number_of_lives: 5,
-      photo_url: "https://cdn2.thecatapi.com/images/8k7.jpg",
-      weight: 432
-    };
+    const pet: IPet =  getPet1();
     const router: Router = TestBed.inject(Router);
     spyOn(router, 'navigateByUrl');
     component.navigateToDetails(pet);
-    expect(router.navigateByUrl).toHaveBeenCalledWith('details/12');
+    expect(router.navigateByUrl).toHaveBeenCalledWith('details/6');
   });
 
   it('should sortData with direction', () => {

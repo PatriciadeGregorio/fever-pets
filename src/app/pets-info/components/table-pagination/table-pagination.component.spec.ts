@@ -1,4 +1,6 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { getLinks } from '../../test/utils.test';
 
 import { TablePaginationComponent } from './table-pagination.component';
 
@@ -8,7 +10,8 @@ describe('TablePaginationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TablePaginationComponent ]
+      declarations: [ TablePaginationComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   });
@@ -16,12 +19,7 @@ describe('TablePaginationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TablePaginationComponent);
     component = fixture.componentInstance;
-    component.links = {
-      prev: 'https://linkPrev.com',
-      next: 'https://linkNext.com',
-      first: 'https://linkFirst.com',
-      last: 'https://linkLast.com',
-    };
+    component.links = getLinks();
     fixture.detectChanges();
   });
 

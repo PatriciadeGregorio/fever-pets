@@ -1,11 +1,9 @@
 <section class="pagination">
-    <div
-     [ngClass]="{'pagination-item--disabled': !links.prev}" 
-     class="pagination-item"
-     (click)="paginateFirst()"
-     > << </div>
-    <div [ngClass]="{'pagination-item--disabled': !links.prev}" class="pagination-item" (click)="paginatePrevious()"> < </div>
-    <div [ngClass]="{'pagination-item--disabled': !links.next}" class="pagination-item" (click)="paginateNext()"> > </div>
-    <div [ngClass]="{'pagination-item--disabled': !links.next}" class="pagination-item" (click)="paginateLast()"> >> </div>
-   </section>
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle [ngClass]="{'pagination-item--disabled': !links.prev}" (click)="paginateFirst()" value="first"> << </mat-button-toggle>
+        <mat-button-toggle [ngClass]="{'pagination-item--disabled': !links.prev}" (click)="paginatePrevious()" value="prev"> < </mat-button-toggle>
+        <mat-button-toggle [ngClass]="{'pagination-item--disabled': !links.next}" (click)="paginateNext()" value="next"> > </mat-button-toggle>
+        <mat-button-toggle [ngClass]="{'pagination-item--disabled': !links.next}" (click)="paginateLast()" value="last"> >> </mat-button-toggle>
+    </mat-button-toggle-group>
+</section>
  
